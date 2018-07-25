@@ -172,7 +172,7 @@ def parse_item(item, items, indent=0):
             ret['deps'].add(item_type['_offset'])
             ret['deps'] |= parsed_item['deps']
             ret['size'] = parsed_item['size']
-        ret['text'] = 'const ' + member_type
+        ret['text'] = member_type + ' const '
 
     elif item['_tag'] == 'DW_TAG_subroutine_type':
         member_type = 'void'
